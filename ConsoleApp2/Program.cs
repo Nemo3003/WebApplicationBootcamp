@@ -100,6 +100,9 @@ else{ Console.Write("Este es un triangulo escaleno");}
 
 Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
 
+//STILL NEEDS IMPROVEMENT
+
+
 //Desarrolle un programa que calcule el desglose de una cantidad dada, en
 //billetes y monedas tal que se minimice la cantidad de monedas y billetes.
 //Considere las denominaciones $1000, $500, $100, $50, $20, $10, $5, $2, $1,
@@ -124,20 +127,5 @@ int lastDec = decimInt - (newAtt * 10);//devuelve los decimos
 int unidades = dineroDado / 1;
 int lastNumber = dineroDado % 10; //devuelve el ultimo numero
 
-if (lastCalc >= 7)
-{
-    int calcMax = 9 - lastCalc;
-    int defCien = lastCalc - calcMax;
-    if (lastDec >= 7)
-    {
-        int calcDec = 9 - lastDec;
-        int defDec = lastDec - calcDec;
-        if (lastNumber >= 3)
-        {
-            int calcLast = 3 - lastNumber;
-            int defLast = lastNumber - calcDec;
-            Console.WriteLine($"Obtendras {mil} billetes de $1000, {defCien} de $500, {calcMax} de $200, {defDec} de $20, 1 moneda de ${defLast} y una de {calcLast}");
+Console.WriteLine($"Obtienes {mil} billetes de $1000, {lastCalc} billetes de $100, un billete de ${10}, y {lastNumber} monedas de $1");
 
-        }
-    }
-}
