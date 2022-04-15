@@ -1,5 +1,7 @@
 ﻿//.NET - C# - Ejercicios - Clases 1 y 2
 
+using System.Linq;
+
 Console.WriteLine("Ejercicios de clases 1 y 2");
 //Dado un valor, devolver un mensaje que diga “El valor es mayor que 100” sólo cuando se cumpla dicha condición.
 Console.WriteLine("Ingrese un numero");
@@ -100,9 +102,6 @@ else{ Console.Write("Este es un triangulo escaleno");}
 
 Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
 
-//STILL NEEDS IMPROVEMENT
-
-
 //Desarrolle un programa que calcule el desglose de una cantidad dada, en
 //billetes y monedas tal que se minimice la cantidad de monedas y billetes.
 //Considere las denominaciones $1000, $500, $100, $50, $20, $10, $5, $2, $1,
@@ -115,17 +114,80 @@ int dineroDado = Convert.ToInt32(Console.ReadLine());
 int miles = dineroDado / 1000;
 string mil = String.Format("{0:0}", miles);//devuelve los miles
 int milInt = Convert.ToInt32(mil); //convierte los miles de string a int
+
 int cientos = dineroDado / 100;
 string cien = String.Format("{0:0}", cientos);
 int intCien = Convert.ToInt32(cien);
 int lastCalc = intCien - milInt * 10; //devuelve los cientos
+
 int decimos = dineroDado / 10;
 string diez = String.Format("{0:0}", decimos);
 int decimInt = Convert.ToInt32(diez);
 int newAtt = Convert.ToInt32(string.Format("{0}{1}", milInt, lastCalc));
 int lastDec = decimInt - (newAtt * 10);//devuelve los decimos
+
 int unidades = dineroDado / 1;
 int lastNumber = dineroDado % 10; //devuelve el ultimo numero
 
-Console.WriteLine($"Obtienes {mil} billetes de $1000, {lastCalc} billetes de $100, un billete de ${10}, y {lastNumber} monedas de $1");
+List<string> cient1 = new List<string>();
+int count = (int)Math.Floor(Math.Log10(dineroDado) + 1);
+if(count >= 4){
+    var mil1 = $"Recibes {mil} billetes de $1000";
+    cient1.Add(mil1);}
+if (lastCalc == 9){int cienF = lastCalc - 4; int cienF2 = lastCalc - 7; var first = $"1 billetes de ${cienF}00 y 2 de ${cienF2}00";
+    cient1.Add(first);}
+if (lastCalc == 8) { int cienF1 = lastCalc - 3; int cienF21 = lastCalc - 6; var second = $"1 billetes de ${cienF1}00, 1 de ${cienF21}00 y uno de $100";
+    cient1.Add(second); }
+if (lastCalc == 7){int cienF = lastCalc - 2; int cienF2 = lastCalc - 5; var third = $"1 billetes de ${cienF}00 y 1 de ${cienF2}00";
+    cient1.Add(third);}
+if (lastCalc == 6){int cienF = lastCalc - 1; int cienF2 = lastCalc - 5; var fourth = $"1 billetes de ${cienF}00 y 1 de ${cienF2}00";
+    cient1.Add(fourth);}
+if (lastCalc == 5){int cienF = lastCalc - 3; int cienF2 = lastCalc - 4; var fifth = $"2 billetes de ${cienF}00 y 1 de ${cienF2}00";
+    cient1.Add(fifth);}
+if (lastCalc == 4){int cienF = lastCalc / 2; var sixth = $"2 billetes de ${cienF}00";
+    cient1.Add(sixth);}
+if (lastCalc == 3){int cienF = lastCalc - 2; var seventh = $"3 billetes de ${cienF}00";
+    cient1.Add(seventh);}
+if (lastCalc == 2) { var eigth = $"1 billete de ${lastCalc}00"; cient1.Add(eigth); }
+if(lastCalc == 1) { var ninth = "1 billete de $100"; cient1.Add(ninth); }
 
+//--------------------------------------------------------------------------------------------------------------------------------
+
+if (lastDec == 9){int dieF = lastDec - 4; int dieF2 = lastDec - 7; var first = $"1 billetes de ${dieF}0 y 2 de ${dieF2}0";
+    cient1.Add(first);}
+if (lastDec == 8) { int dieF = lastDec - 3; int dieF2 = lastDec - 6; var second = $"1 billetes de ${dieF}0, 1 de ${dieF2}0 y uno de $10";
+    cient1.Add(second); }
+if (lastDec == 7){int dieF = lastDec - 2; int dieF2 = lastDec - 5; var third = $"1 billetes de ${dieF}0 y 1 de ${dieF2}0";
+    cient1.Add(third);}
+if (lastDec == 6){int dieF = lastDec - 1; int dieF2 = lastDec - 5; var fourth = $"1 billetes de ${dieF}0 y 1 de ${dieF2}0";
+    cient1.Add(fourth);}
+if (lastDec == 5){int dieF = lastDec - 3; int dieF2 = lastDec - 4; var fifth = $"2 billetes de ${dieF}0 y 1 de ${dieF2}0";
+    cient1.Add(fifth);}
+if (lastDec == 4){int dieF = lastDec / 2; var sixth = $"2 billetes de ${dieF}0";
+    cient1.Add(sixth);}
+if (lastDec == 3){int dieF = lastDec - 2; var seventh = $"3 billetes de ${dieF}0";
+    cient1.Add(seventh);}
+if (lastDec == 2) { var eigth = $"1 billete de ${lastCalc}0"; cient1.Add(eigth); }
+if (lastDec == 1) { var ninth = "1 billete de $10"; cient1.Add(ninth); }
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+if (lastNumber == 9){int lNumF = lastDec - 4; int lNumF2 = lastDec - 7; var first = $"1 billetes de ${lNumF} y 2 de ${lNumF2}";
+    cient1.Add(first);}
+if (lastNumber == 8){int lNumF = lastDec - 3; int lNumF2 = lastDec - 6; var second = $"1 billetes de ${lNumF}, 1 monedas de ${lNumF2} y 1 moneda de $1";
+    cient1.Add(second);}
+if (lastNumber == 7){int lNumF = lastDec - 2; int lNumF2 = lastDec - 5; var third = $"1 billetes de ${lNumF} y 1 moneda de ${lNumF2}";
+    cient1.Add(third);}
+if (lastNumber == 6){int lNumF = lastDec - 1; int lNumF2 = lastDec - 5; var fourth = $"1 billetes de ${lNumF} y 1 moneda de ${lNumF2}";
+    cient1.Add(fourth);}
+if (lastNumber == 5){int lNumF = lastDec - 3; int lNumF2 = lastDec - 4; var fifth = $"2 monedas de ${lNumF} y 1 de ${lNumF2}";
+    cient1.Add(fifth);}
+if (lastNumber == 4){int lNumF = lastDec / 2; var sixth = $"2 monedas de ${lNumF}";
+    cient1.Add(sixth);}
+if (lastNumber == 3){int lNumF = lastDec - 2; var seventh = $"1 moneda de $2 y una moneda de ${lNumF}";
+    cient1.Add(seventh);}
+if (lastNumber == 2) { var eigth = $"1 moneda de ${lastNumber}"; cient1.Add(eigth); }
+if (lastNumber == 1) { var ninth = "1 moneda de $1"; cient1.Add(ninth); }
+
+
+Console.WriteLine(String.Join(", ", cient1));
