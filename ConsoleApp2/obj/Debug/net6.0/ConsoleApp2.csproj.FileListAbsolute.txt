@@ -1,0 +1,15 @@
+H:\VS\WebApplicationBootcamp\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.exe
+H:\VS\WebApplicationBootcamp\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.deps.json
+H:\VS\WebApplicationBootcamp\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.runtimeconfig.json
+H:\VS\WebApplicationBootcamp\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.dll
+H:\VS\WebApplicationBootcamp\ConsoleApp2\bin\Debug\net6.0\ConsoleApp2.pdb
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.csproj.AssemblyReference.cache
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.GeneratedMSBuildEditorConfig.editorconfig
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.AssemblyInfoInputs.cache
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.AssemblyInfo.cs
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.csproj.CoreCompileInputs.cache
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.dll
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\refint\ConsoleApp2.dll
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.pdb
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ConsoleApp2.genruntimeconfig.cache
+H:\VS\WebApplicationBootcamp\ConsoleApp2\obj\Debug\net6.0\ref\ConsoleApp2.dll
