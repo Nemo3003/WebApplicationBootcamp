@@ -109,7 +109,7 @@ Console.WriteLine("-------------------------------------------------------------
 //imprimir: “1 billete de $1000, 1 billete de $500, 1 billete de $200, 1 billete de
 //$20, 1 moneda de $2, 1 moneda de $1). Obviar los signos de billete ($) y
 //tratar todos los valores como números, para los cálculos.
-Console.WriteLine("Ingrese la cantidad de dinero que desea desglosar");
+Console.WriteLine("Ingrese la cantidad de dinero que desea desglosar. Minimo 3 digitos");
 int dineroDado = Convert.ToInt32(Console.ReadLine());
 int miles = dineroDado / 1000;
 string mil = String.Format("{0:0}", miles);//devuelve los miles
@@ -150,7 +150,6 @@ if (lastCalc == 3){int cienF = lastCalc - 2; var seventh = $"3 billetes de ${cie
     cient1.Add(seventh);}
 if (lastCalc == 2) { var eigth = $"1 billete de ${lastCalc}00"; cient1.Add(eigth); }
 if(lastCalc == 1) { var ninth = "1 billete de $100"; cient1.Add(ninth); }
-
 //--------------------------------------------------------------------------------------------------------------------------------
 
 if (lastDec == 9){int dieF = lastDec - 4; int dieF2 = lastDec - 7; var first = $"1 billetes de ${dieF}0 y 2 de ${dieF2}0";
@@ -172,22 +171,41 @@ if (lastDec == 1) { var ninth = "1 billete de $10"; cient1.Add(ninth); }
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-if (lastNumber == 9){int lNumF = lastDec - 4; int lNumF2 = lastDec - 7; var first = $"1 billetes de ${lNumF} y 2 de ${lNumF2}";
+if (lastNumber == 9){int lNumF = lastNumber - 4; int lNumF2 = lastNumber - 7; var first = $"1 billetes de ${lNumF} y 2 monedas de ${lNumF2}";
     cient1.Add(first);}
-if (lastNumber == 8){int lNumF = lastDec - 3; int lNumF2 = lastDec - 6; var second = $"1 billetes de ${lNumF}, 1 monedas de ${lNumF2} y 1 moneda de $1";
+if (lastNumber == 8){int lNumF = lastNumber - 3; int lNumF2 = lastNumber - 6; var second = $"1 billetes de ${lNumF}, 1 monedas de ${lNumF2} y 1 moneda de $1";
     cient1.Add(second);}
-if (lastNumber == 7){int lNumF = lastDec - 2; int lNumF2 = lastDec - 5; var third = $"1 billetes de ${lNumF} y 1 moneda de ${lNumF2}";
+if (lastNumber == 7){int lNumF = lastNumber - 2; int lNumF2 = lastNumber - 5; var third = $"1 billetes de ${lNumF} y 1 moneda de ${lNumF2}";
     cient1.Add(third);}
-if (lastNumber == 6){int lNumF = lastDec - 1; int lNumF2 = lastDec - 5; var fourth = $"1 billetes de ${lNumF} y 1 moneda de ${lNumF2}";
+if (lastNumber == 6){int lNumF = lastNumber - 1; int lNumF2 = lastNumber - 5; var fourth = $"1 billetes de ${lNumF} y 1 moneda de ${lNumF2}";
     cient1.Add(fourth);}
-if (lastNumber == 5){int lNumF = lastDec - 3; int lNumF2 = lastDec - 4; var fifth = $"2 monedas de ${lNumF} y 1 de ${lNumF2}";
+if (lastNumber == 5){int lNumF = lastNumber - 3; int lNumF2 = lastNumber - 4; var fifth = $"2 monedas de ${lNumF} y 1 de ${lNumF2}";
     cient1.Add(fifth);}
-if (lastNumber == 4){int lNumF = lastDec / 2; var sixth = $"2 monedas de ${lNumF}";
+if (lastNumber == 4){ var sixth = "2 monedas de $2";
     cient1.Add(sixth);}
 if (lastNumber == 3){int lNumF = lastDec - 2; var seventh = $"1 moneda de $2 y una moneda de ${lNumF}";
     cient1.Add(seventh);}
 if (lastNumber == 2) { var eigth = $"1 moneda de ${lastNumber}"; cient1.Add(eigth); }
 if (lastNumber == 1) { var ninth = "1 moneda de $1"; cient1.Add(ninth); }
 
-
 Console.WriteLine(String.Join(", ", cient1));
+//-------------------------------------------------------------------------------------------------------------
+//Pide un número N, y muestra todos los números del 1 al N.
+Console.WriteLine("Ingrese un numero, por favor");
+int userFor = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+for(int i = 0; i < userFor; i++){Console.WriteLine(i+1);}
+//--------------------------------------------------------------------------------------------------------------
+//Pedir 15 números y escribir la suma total.
+var list1 = new List<int>();
+int counting = list1.Count();
+while (counting < 15) {
+    Console.WriteLine("Ingrese un numero");
+    int uno = Convert.ToInt32(Console.ReadLine());
+    list1.Add(uno);
+    if (counting == 15){
+        int sumNum = list1.Sum();
+        Console.WriteLine(sumNum); break;}
+
+}
+
