@@ -181,31 +181,153 @@ if (lastNumber == 6){int lNumF = lastNumber - 1; int lNumF2 = lastNumber - 5; va
     cient1.Add(fourth);}
 if (lastNumber == 5){int lNumF = lastNumber - 3; int lNumF2 = lastNumber - 4; var fifth = $"2 monedas de ${lNumF} y 1 de ${lNumF2}";
     cient1.Add(fifth);}
-if (lastNumber == 4){ var sixth = "2 monedas de $2";
-    cient1.Add(sixth);}
-if (lastNumber == 3){int lNumF = lastDec - 2; var seventh = $"1 moneda de $2 y una moneda de ${lNumF}";
-    cient1.Add(seventh);}
+if (lastNumber == 4){ var sixth = "2 monedas de $2"; cient1.Add(sixth);}
+if (lastNumber == 3){ var seventh = $"1 moneda de $2 y una moneda de $1"; cient1.Add(seventh);}
 if (lastNumber == 2) { var eigth = $"1 moneda de ${lastNumber}"; cient1.Add(eigth); }
 if (lastNumber == 1) { var ninth = "1 moneda de $1"; cient1.Add(ninth); }
 
 Console.WriteLine(String.Join(", ", cient1));
-//-------------------------------------------------------------------------------------------------------------
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
 //Pide un número N, y muestra todos los números del 1 al N.
 Console.WriteLine("Ingrese un numero, por favor");
 int userFor = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 for(int i = 0; i < userFor; i++){Console.WriteLine(i+1);}
-//--------------------------------------------------------------------------------------------------------------
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
 //Pedir 15 números y escribir la suma total.
 var list1 = new List<int>();
-int counting = list1.Count();
-while (counting < 15) {
+for (int i = 0; i < 15; i++)
+{
     Console.WriteLine("Ingrese un numero");
-    int uno = Convert.ToInt32(Console.ReadLine());
-    list1.Add(uno);
-    if (counting == 15){
-        int sumNum = list1.Sum();
-        Console.WriteLine(sumNum); break;}
-
+    int userFor2 = Convert.ToInt32(Console.ReadLine());
+    list1.Add(userFor2);
 }
+Console.WriteLine("El total de los numeros es: " + list1.Sum());
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+//Pide 5 números e indica si alguno es múltiplo de 3.
+Console.WriteLine("Chequeando si alguno es multiple de 3");
+Console.WriteLine("Ingrese un numero");
+int firsUno = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ingrese un numero");
+var firsDos = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ingrese un numero");
+int firsTres = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ingrese un numero");
+int firsCuatro = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ingrese un numero");
+int firstCinco = Convert.ToInt32(Console.ReadLine());
 
+if (firsUno % 3 == 0 || firsDos % 3 == 0 || firsTres % 3 == 0 || firsCuatro % 3 == 0 || firstCinco % 3 == 0)
+{Console.WriteLine("Alguno de los numeros es multiplo de 3");}
+else{Console.WriteLine("Ninguno de los numeros es multiplo de 3");}
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+//Escriba un programa que solicite una contraseña (el texto de la contraseña no es importante) y la vuelva a solicitar
+//hasta que las dos contraseñas coincidan.
+Console.WriteLine("Ingrese una contraseña");
+#pragma warning disable CS8600 
+string pass = Console.ReadLine();
+#pragma warning restore CS8600 
+Console.WriteLine("Ingrese la contraseña nuevamente");
+#pragma warning disable CS8600 
+string pass2 = Console.ReadLine();
+#pragma warning restore CS8600 
+while (pass != pass2){
+    Console.WriteLine("Las contraseñas no coinciden, por favor ingrese la contraseña nuevamente");
+#pragma warning disable CS8600 
+    pass2 = Console.ReadLine();
+#pragma warning restore CS8600 
+}
+    Console.WriteLine("Las contraseñas coinciden");
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+//Mismo que el anterior pero con un límite de tres peticiones. Luego de las tres
+//peticiones no debe solicitar más la contraseña y terminar el programa.
+Console.WriteLine("Ingrese una contraseña");
+#pragma warning disable CS8600
+string pass3 = Console.ReadLine();
+#pragma warning restore CS8600
+Console.WriteLine("Ingrese la contraseña nuevamente");
+#pragma warning disable CS8600
+string pass4 = Console.ReadLine();
+#pragma warning restore CS8600
+int cont = 0;
+while (pass3 != pass4){
+    Console.WriteLine("Las contraseñas no coinciden, por favor ingrese la contraseña nuevamente");
+#pragma warning disable CS8600
+    pass4 = Console.ReadLine();
+#pragma warning restore CS8600
+    cont++;
+    if (cont == 3){
+        Console.WriteLine("Ha excedido el numero de intentos");
+        break;}
+}
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+//Proponer al usuario que adivine un número a base de intentarlo.
+Console.WriteLine("Adivina un numero");
+int userNum = Convert.ToInt32(Console.ReadLine());
+Random rnd = new Random();
+int rndNum = rnd.Next(1, 100);
+int cont2 = 0;
+while (userNum != rndNum){
+    if (userNum > rndNum){
+        Console.WriteLine("El numero es mas pequeño");
+        Console.WriteLine("Ingrese un numero"); }
+    else{
+        Console.WriteLine("El numero es mas grande");
+        Console.WriteLine("Ingrese un numero");}
+    userNum = Convert.ToInt32(Console.ReadLine());
+    cont2++;
+    if (cont2 == 25){
+        Console.WriteLine("Ha excedido el numero de intentos");
+        break;}}
+Console.WriteLine("El numero era: " + rndNum);
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+//Modificar el programa anterior para que vaya dando pistas del tipo «mayor» o «menor».
+Console.WriteLine("Adivina un numero");
+int userNum2 = Convert.ToInt32(Console.ReadLine());
+Random rnd2 = new Random();
+int rndNum2 = rnd2.Next(1, 100);
+int cont3 = 0;
+while (userNum2 != rndNum2){
+    if (userNum2 > rndNum2){
+        Console.WriteLine("Menor");
+        Console.WriteLine("Ingrese un numero");}
+    else{
+        Console.WriteLine("Mayor");
+        Console.WriteLine("Ingrese un numero");}
+    userNum2 = Convert.ToInt32(Console.ReadLine());
+    cont3++;
+    if (cont3 == 25){
+        Console.WriteLine("Ha excedido el numero de intentos");
+        break;}}
+Console.WriteLine("El numero era: " + rndNum2);
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+//Crea un programa que permita sumar N números. El usuario decide cuándo termina de introducir números al indicar la palabra ‘fin’.
+Console.WriteLine("Ingrese un numero");
+var list2 = new List<int>();
+var userFor3 = Convert.ToInt32(Console.ReadLine());
+var exit = false;
+list2.Add(userFor3);
+while (exit != true){
+    try{
+        Console.WriteLine("Ingrese un numero");
+        userFor3 = Convert.ToInt32(Console.ReadLine());
+        list2.Add(userFor3);
+        Console.WriteLine("Ingrese fin para terminar, si desea continuar ingrese N");
+        Console.WriteLine("De lo contrario su numero no sera tenido en cuenta");
+        var userFor4 = Convert.ToString(Console.ReadLine());
+        if (userFor4 == "fin"){
+            exit = true;}
+        else{
+            exit = false;}}
+    catch (Exception){
+        Console.WriteLine("Ingrese un numero");
+        userFor3 = Convert.ToInt32(Console.ReadLine());
+        list2.Add(userFor3);
+        Console.WriteLine("Ingrese fin para terminar");
+        var userFor4 = Convert.ToString(Console.ReadLine());
+        if (userFor4 == "fin"){
+            exit = true;}
+        else{
+            exit = false;}}}
+Console.WriteLine("El total de los numeros es: " + list2.Sum());
+Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
