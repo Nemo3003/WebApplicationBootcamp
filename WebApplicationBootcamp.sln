@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplicationBootcampWeb",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstAPI", "MyFirstAPI\MyFirstAPI.csproj", "{F877830C-DCF1-4964-9BA6-1227E269766F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{609083F3-833B-4AA0-8A1B-ECE3F63B642A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjerciciosClase1y2", "ConsoleApp2\EjerciciosClase1y2.csproj", "{609083F3-833B-4AA0-8A1B-ECE3F63B642A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

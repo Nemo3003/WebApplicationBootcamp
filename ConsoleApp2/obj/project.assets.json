@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\VS\\WebApplicationBootcamp\\ConsoleApp2\\ConsoleApp2.csproj",
-      "projectName": "ConsoleApp2",
-      "projectPath": "H:\\VS\\WebApplicationBootcamp\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectUniqueName": "H:\\VS\\WebApplicationBootcamp\\ConsoleApp2\\EjerciciosClase1y2.csproj",
+      "projectName": "EjerciciosClase1y2",
+      "projectPath": "H:\\VS\\WebApplicationBootcamp\\ConsoleApp2\\EjerciciosClase1y2.csproj",
       "packagesPath": "C:\\Users\\ulima\\.nuget\\packages\\",
       "outputPath": "H:\\VS\\WebApplicationBootcamp\\ConsoleApp2\\obj\\",
       "projectStyle": "PackageReference",
