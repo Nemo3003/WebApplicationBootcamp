@@ -1,0 +1,15 @@
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\bin\Debug\net6.0\Ejercicios3y4.exe
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\bin\Debug\net6.0\Ejercicios3y4.deps.json
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\bin\Debug\net6.0\Ejercicios3y4.runtimeconfig.json
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\bin\Debug\net6.0\Ejercicios3y4.dll
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\bin\Debug\net6.0\Ejercicios3y4.pdb
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\Ejercicios3y4.csproj.AssemblyReference.cache
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\Ejercicios3y4.GeneratedMSBuildEditorConfig.editorconfig
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\Ejercicios3y4.AssemblyInfoInputs.cache
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\Ejercicios3y4.AssemblyInfo.cs
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\Ejercicios3y4.csproj.CoreCompileInputs.cache
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\Ejercicios3y4.dll
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\refint\Ejercicios3y4.dll
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\Ejercicios3y4.pdb
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\Ejercicios3y4.genruntimeconfig.cache
+H:\VS\WebApplicationBootcamp\Ejercicios3y4\obj\Debug\net6.0\ref\Ejercicios3y4.dll
