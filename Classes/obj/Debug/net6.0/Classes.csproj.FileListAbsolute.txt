@@ -1,0 +1,12 @@
+H:\VS\WebApplicationBootcamp\Classes\bin\Debug\net6.0\Classes.deps.json
+H:\VS\WebApplicationBootcamp\Classes\bin\Debug\net6.0\Classes.dll
+H:\VS\WebApplicationBootcamp\Classes\bin\Debug\net6.0\Classes.pdb
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\Classes.csproj.AssemblyReference.cache
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\Classes.AssemblyInfoInputs.cache
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\Classes.AssemblyInfo.cs
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\Classes.csproj.CoreCompileInputs.cache
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\Classes.dll
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\refint\Classes.dll
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\Classes.pdb
+H:\VS\WebApplicationBootcamp\Classes\obj\Debug\net6.0\ref\Classes.dll

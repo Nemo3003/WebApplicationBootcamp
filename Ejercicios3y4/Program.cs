@@ -4,6 +4,9 @@
 exámenes de un alumno, calcular su promedio y mostrar por pantalla las 10
 notas de los exámenes y el promedio resultante.
  */
+
+
+
 var notas = new List<int>() { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 int suma = 0;
 foreach (int nota in notas)
@@ -231,23 +234,7 @@ en la fila 1, calcular 1*1, 1*2, 1*3, etc. usando las posiciones del array o
 arreglo. Al finalizar el cálculo, mostrar la matriz por pantalla
  */
 //Crea una matriz de 3 x 3 teniendo en cuenta que en la primera fila y la primera columna se debe guardar los números (de 0 a 9), estando el cero en la primera posición (fila 0, columna 0). El resto de los lugares debe ser calculado usando los números que se dispone, por ejemplo, en la fila 1, calcular 1*1, 1*2, 1*3, etc. usando las posiciones del array o arreglo. Al finalizar el cálculo, mostrar la matriz por pantalla
-var matriz3 = new int[3, 3];
+var matriz3 = new int[10, 10];
+//Almacena las tablas del 1 al 9. En la primera fila y columna pon el 0
+//write hello world
 
-
-Console.WriteLine("----------------------------------------------------");
-/*
- Crear una matriz de 10 x 10, y “esconder” varias ‘X’ en lugares aleatorios (la
-cantidad que el programador decida pero no más de la mitad de lugares
-disponibles en la matriz). El usuario deberá ingresar el lugar donde cree que
-hay una X, ingresando la fila y la columna por separado. Informar si acertó o
-no por cada ingreso. Se debe pedir al usuario ingresar valores por tantas X
-que se haya guardado. El usuario tiene 3 intentos para fallar. Al finalizar (Ya
-sea porque se terminaron los 3 intentos, o el jugador acertó todas las X)
-imprimir por pantalla la matriz con sus correspondientes X, mostrando un *
-donde no haya nada
- */
-//crea una matriz de 10 x 10
-var matriz4 = new int[10, 10];
-
-
-Console.WriteLine("----------------------------------------------------");

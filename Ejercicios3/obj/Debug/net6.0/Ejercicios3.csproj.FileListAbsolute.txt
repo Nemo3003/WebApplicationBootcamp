@@ -1,0 +1,15 @@
+H:\VS\WebApplicationBootcamp\Ejercicios3\bin\Debug\net6.0\Ejercicios3.exe
+H:\VS\WebApplicationBootcamp\Ejercicios3\bin\Debug\net6.0\Ejercicios3.deps.json
+H:\VS\WebApplicationBootcamp\Ejercicios3\bin\Debug\net6.0\Ejercicios3.runtimeconfig.json
+H:\VS\WebApplicationBootcamp\Ejercicios3\bin\Debug\net6.0\Ejercicios3.dll
+H:\VS\WebApplicationBootcamp\Ejercicios3\bin\Debug\net6.0\Ejercicios3.pdb
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\Ejercicios3.csproj.AssemblyReference.cache
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\Ejercicios3.GeneratedMSBuildEditorConfig.editorconfig
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\Ejercicios3.AssemblyInfoInputs.cache
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\Ejercicios3.AssemblyInfo.cs
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\Ejercicios3.csproj.CoreCompileInputs.cache
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\Ejercicios3.dll
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\refint\Ejercicios3.dll
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\Ejercicios3.pdb
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\Ejercicios3.genruntimeconfig.cache
+H:\VS\WebApplicationBootcamp\Ejercicios3\obj\Debug\net6.0\ref\Ejercicios3.dll

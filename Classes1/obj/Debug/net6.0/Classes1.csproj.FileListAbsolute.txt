@@ -1,0 +1,5 @@
+H:\VS\WebApplicationBootcamp\Classes1\obj\Debug\net6.0\Classes1.csproj.AssemblyReference.cache
+H:\VS\WebApplicationBootcamp\Classes1\obj\Debug\net6.0\Classes1.GeneratedMSBuildEditorConfig.editorconfig
+H:\VS\WebApplicationBootcamp\Classes1\obj\Debug\net6.0\Classes1.AssemblyInfoInputs.cache
+H:\VS\WebApplicationBootcamp\Classes1\obj\Debug\net6.0\Classes1.AssemblyInfo.cs
+H:\VS\WebApplicationBootcamp\Classes1\obj\Debug\net6.0\Classes1.csproj.CoreCompileInputs.cache
