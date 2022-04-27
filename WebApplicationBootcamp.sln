@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplicationBootcampWeb", "WebApplicationBootcampWeb\WebApplicationBootcampWeb.csproj", "{6335D6E6-78BB-49A0-82F6-218575C57DC3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstAPI", "MyFirstAPI\MyFirstAPI.csproj", "{F877830C-DCF1-4964-9BA6-1227E269766F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjerciciosClase1y2", "ConsoleApp2\EjerciciosClase1y2.csproj", "{609083F3-833B-4AA0-8A1B-ECE3F63B642A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicios3y4", "Ejercicios3y4\Ejercicios3y4.csproj", "{B0477171-EE4D-4AA6-A397-D0B67858F2C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicios3", "Ejercicios3\Ejercicios3.csproj", "{C25E3B3B-C0F1-4FC5-80F2-63B9DFA4484E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicios3", "Ejercicios3\Ejercicios3.csproj", "{C25E3B3B-C0F1-4FC5-80F2-63B9DFA4484E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIBootcamp", "WebAPIBootcamp\WebAPIBootcamp.csproj", "{9F25EE77-51A4-4D26-807E-006D60C62ED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiBoot1", "WebApiBoot1\WebApiBoot1.csproj", "{5FD971A4-01EA-4C69-9E85-00454EB019F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiBoot2-Controller", "WebApiBoot2-Controller\WebApiBoot2-Controller.csproj", "{13F5BCD0-E292-4117-9687-013202E2FDD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6335D6E6-78BB-49A0-82F6-218575C57DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6335D6E6-78BB-49A0-82F6-218575C57DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6335D6E6-78BB-49A0-82F6-218575C57DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6335D6E6-78BB-49A0-82F6-218575C57DC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F877830C-DCF1-4964-9BA6-1227E269766F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F877830C-DCF1-4964-9BA6-1227E269766F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F877830C-DCF1-4964-9BA6-1227E269766F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +39,18 @@ Global
 		{C25E3B3B-C0F1-4FC5-80F2-63B9DFA4484E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C25E3B3B-C0F1-4FC5-80F2-63B9DFA4484E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C25E3B3B-C0F1-4FC5-80F2-63B9DFA4484E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F25EE77-51A4-4D26-807E-006D60C62ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F25EE77-51A4-4D26-807E-006D60C62ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F25EE77-51A4-4D26-807E-006D60C62ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F25EE77-51A4-4D26-807E-006D60C62ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD971A4-01EA-4C69-9E85-00454EB019F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD971A4-01EA-4C69-9E85-00454EB019F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD971A4-01EA-4C69-9E85-00454EB019F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD971A4-01EA-4C69-9E85-00454EB019F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F5BCD0-E292-4117-9687-013202E2FDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F5BCD0-E292-4117-9687-013202E2FDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F5BCD0-E292-4117-9687-013202E2FDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F5BCD0-E292-4117-9687-013202E2FDD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
