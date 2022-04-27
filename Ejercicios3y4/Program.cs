@@ -233,8 +233,30 @@ lugares debe ser calculado usando los números que se dispone, por ejemplo,
 en la fila 1, calcular 1*1, 1*2, 1*3, etc. usando las posiciones del array o
 arreglo. Al finalizar el cálculo, mostrar la matriz por pantalla
  */
-//Crea una matriz de 3 x 3 teniendo en cuenta que en la primera fila y la primera columna se debe guardar los números (de 0 a 9), estando el cero en la primera posición (fila 0, columna 0). El resto de los lugares debe ser calculado usando los números que se dispone, por ejemplo, en la fila 1, calcular 1*1, 1*2, 1*3, etc. usando las posiciones del array o arreglo. Al finalizar el cálculo, mostrar la matriz por pantalla
-var matriz3 = new int[10, 10];
-//Almacena las tablas del 1 al 9. En la primera fila y columna pon el 0
-//write hello world
-
+//crea una matriz de 9 x 9
+var matriz3 = new int[9, 9];
+//llena la matriz con tablas de multiplicar del 1 al 9
+for (int i = 0; i < 9; i++)
+{
+    for (int j = 0; j < 9; j++)
+    {
+        if (i == 0 && j == 0)
+        {
+            matriz3[i, j] = 0;
+        }
+        else
+        {
+            matriz3[i, j] = i * j;
+        }
+    }
+}
+//imprime la matriz por la pantalla
+for (int i = 0; i < 9; i++)
+{
+    for (int j = 0; j < 9; j++)
+    {
+        Console.Write(matriz3[i, j]);
+    }
+    Console.WriteLine();
+}
+Console.WriteLine("----------------------------------------------------");
