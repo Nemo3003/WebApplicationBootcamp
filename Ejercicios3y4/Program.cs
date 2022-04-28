@@ -234,11 +234,11 @@ en la fila 1, calcular 1*1, 1*2, 1*3, etc. usando las posiciones del array o
 arreglo. Al finalizar el cálculo, mostrar la matriz por pantalla
  */
 //crea una matriz de 9 x 9
-var matriz3 = new int[9, 9];
+var matriz3 = new int[10, 10];
 //llena la matriz con tablas de multiplicar del 1 al 9
-for (int i = 0; i < 9; i++)
+for (int i = 0; i < 10; i++)
 {
-    for (int j = 0; j < 9; j++)
+    for (int j = 0; j < 10; j++)
     {
         if (i == 0 && j == 0)
         {
@@ -251,11 +251,76 @@ for (int i = 0; i < 9; i++)
     }
 }
 //imprime la matriz por la pantalla
-for (int i = 0; i < 9; i++)
+for (int i = 0; i < 10; i++)
 {
-    for (int j = 0; j < 9; j++)
+    for (int j = 0; j < 10; j++)
     {
-        Console.Write(matriz3[i, j]);
+        var mat = matriz3[i, j].ToString();
+
+        Console.Write(string.Format("{0,10}", " " + mat ));
+    }
+    Console.WriteLine();
+}
+Console.WriteLine("----------------------------------------------------");
+/*
+ Crear una matriz de 10 x 10, y “esconder” varias ‘X’ en lugares aleatorios (la
+cantidad que el programador decida pero no más de la mitad de lugares
+disponibles en la matriz).
+ */
+Random rdnt = new Random();
+//crea una matriz de 10 x 10
+var matriz4 = new char[10, 10];
+//llena la matriz con 'X' en lugares aleatorios y * en los demás
+for (int i = 0; i < 10; i++)
+{
+    for (int j = 0; j < 10; j++)
+    {
+        if (i == rdnt.Next(0, 10) || j == rdnt.Next(0, 10))
+        {
+            matriz4[i, j] = 'X';
+        }
+        else
+        {
+            matriz4[i, j] = '*';
+        }
+    }
+}
+
+/*
+ El usuario deberá ingresar el lugar donde cree que
+hay una X, ingresando la fila y la columna por separado. Informar si acertó o
+no por cada ingreso.
+ */
+//pide al usuario que ingrese la fila y la columna donde cree que hay una X.
+//Informa si acerto o no por cada ingreso. 
+//Al finalizar mostrar la matriz por pantalla.
+//El usuario tiene 3 intentos para fallar.
+int intentos = 3;
+while (intentos > 0)
+{
+    Console.WriteLine("Ingrese la fila donde cree que hay una X");
+    int fila = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingrese la columna donde cree que hay una X");
+    int columna = int.Parse(Console.ReadLine());
+    if (matriz4[fila, columna] == 'X')
+    {
+        Console.WriteLine("Acertaste");
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Fallaste");
+        intentos--;
+    }
+}
+//imprime la matriz por la pantalla
+for (int i = 0; i < 10; i++)
+{
+    for (int j = 0; j < 10; j++)
+    {
+        var mat = matriz4[i, j].ToString();
+
+        Console.Write(string.Format("{0,10}", " " + mat));
     }
     Console.WriteLine();
 }
