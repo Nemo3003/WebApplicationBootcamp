@@ -36,6 +36,7 @@ namespace Ejercicios3
             auto.ConductorHay("si"); //si o no
             auto.EdadConductor(18);
             auto.Encender();
+            auto.Mascota("grande");
             //si el auto esta encendido se acelera o frena
             auto.Acelerar();
             auto.Frenar();
@@ -43,6 +44,7 @@ namespace Ejercicios3
             auto.Acelerar();
             auto.Frenar();
             auto.Pasajeros(3);
+            
             //-------------------------------------
             Mascota mascota = new();
             mascota.MascotaInfo("Pepito", "Gato");
