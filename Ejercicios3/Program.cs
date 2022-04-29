@@ -33,15 +33,16 @@ namespace Ejercicios3
             //-------------------------------------
             Auto auto = new();
             auto.AutoInfo("Ford", "Fiesta", 2090, "Rojo");
+            auto.ConductorHay("si"); //si o no
+            auto.EdadConductor(18);
             auto.Encender();
             //si el auto esta encendido se acelera o frena
-            if (auto.Estado == true)
-            {
-                auto.Acelerar();
-                auto.Frenar();
-            }
-
+            auto.Acelerar();
+            auto.Frenar();
             auto.Apagar();
+            auto.Acelerar();
+            auto.Frenar();
+            auto.Pasajeros(3);
             //-------------------------------------
             Mascota mascota = new();
             mascota.MascotaInfo("Pepito", "Gato");

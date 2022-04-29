@@ -477,35 +477,97 @@ namespace Ejercicios3
         public string? Modelo;
         public int? Año;
         public string? Color;
-        public int Velocidad = 20;
+        public int Velocidad = 50;
         //estado del auto, encendido o apagado
         public bool? Estado;
-        public void AutoInfo(string Marca="Nissan", string Modelo="Nigara", int Año=2028, string Color="Rojo")
+        public bool? Conductor;
+        public int Edad1;
+        public bool? Mayor;
+        public int Capacidad = 4;
+        public bool? Disponible;
+        public void AutoInfo(string Marca = "Nissan", string Modelo = "Nigara", int Año = 2028, string Color = "Rojo")
         {
             Console.WriteLine("La marca del auto es: " + Marca + " " + Modelo + " " + Año + " " + Color);
         }
-        //metodo encender y apagar el motor
-        //Si el motor esta encendido, podemos acelerar y frenar
-        //Al acelerar el auto incrementa unn 10% su velocidad
-        //Al frenar el auto decrementa un 20% su velocidad
+        public void EdadConductor( int edad)
+        {
+            if (edad >= 18)
+            {
+                Mayor = true;
+                Console.WriteLine("El conductor es mayor de edad");
+            }
+            else
+            {
+                Mayor = false;
+                Console.WriteLine("El conductor es menor de edad");
+            }
+        }
+        public void ConductorHay(string conductor)
+        {
+            if (conductor == "si")
+            {
+                Conductor = true;
+                Console.WriteLine("El conductor esta dentro del auto");
+            }
+            else
+            {
+                Conductor = false;
+                Console.WriteLine("El conductor no esta dentro del auto");
+            }
+            }
+            //metodo encender y apagar el motor
+            //Si el motor esta encendido, podemos acelerar y frenar
+            //Al acelerar el auto incrementa unn 10% su velocidad
+            //Al frenar el auto decrementa un 20% su velocidad
         public void Encender()
         {
-            Console.WriteLine("El auto esta encendido");
+            if (Conductor == true && Mayor == true)
+            {
+                Estado = true;                
+                Console.WriteLine("El auto esta encendido");
+            }
+            if (Conductor == false && Mayor == true)
+            {
+                Console.WriteLine("El auto esta apagado ya que no hay conductor");
+            }
+            if (Conductor == true && Mayor == false)
+            {
+                Console.WriteLine("El auto esta apagado ya que el conductor es menor de edad");
+            }
+            if (Conductor == false || Mayor == false)
+            {
+                Console.WriteLine("El auto esta apagado ya que o el conductor no esta en el vehiculo o el conductor es menor de edad");
+            }
         }
         public void Acelerar()
         {
-            var velocidad = Velocidad * 10/100;
-            Console.WriteLine("El auto esta acelerando");
-            Console.WriteLine("La velocidad es: " + velocidad);
+            if (Estado == true)
+            {
+                Velocidad = Velocidad * 10/100;
+                Console.WriteLine("La velocidad es: " + Velocidad);
+            }
+            else
+            {
+                Console.WriteLine("El auto esta apagado");
+            }
         }
         public void Frenar()
         {
-            var velocidad = Velocidad * 20 / 100;
-            Console.WriteLine("El auto esta frenando");
-            Console.WriteLine("La velocidad es: " + velocidad);
+            if (Estado == true)
+            {
+                Velocidad = Velocidad * 20/100;
+                Console.WriteLine("La velocidad es: " + Velocidad);
+            }
+            else
+            {
+                Console.WriteLine("El auto esta apagado");
+            }
+
         }
         public void Apagar()
         {
+            
+            Estado = false;
             Console.WriteLine("El auto esta apagado");
         }
         //metodo para conocer la velocidad
@@ -515,7 +577,7 @@ namespace Ejercicios3
         }
         //estado del auto, encendido o apagado
         public void Estado1()
-        {
+        {   
             if (Estado == true)
             {
                 Console.WriteLine("El auto esta encendido");
@@ -523,6 +585,19 @@ namespace Ejercicios3
             else
             {
                 Console.WriteLine("El auto esta apagado");
+            }
+        }
+        public void Pasajeros(int pasaj)
+        {
+            if (pasaj >= Capacidad)
+            {
+                Disponible = false;
+                Console.WriteLine("El auto esta lleno.");
+            }
+            else
+            {
+                Disponible = true;
+                Console.WriteLine("El auto aun tiene capacidad.");
             }
         }
     }
