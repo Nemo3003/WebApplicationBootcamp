@@ -439,5 +439,173 @@ namespace Ejercicios3
             Console.WriteLine("El total de los numeros es: " + list2.Sum());
         }
     }
+    //Crear una clase Cuadrado con método para calcular el área del mismo.
+    public class Cuadrado
+    {
+        public int base1;
+        public int altura;
+        public int area;
+
+        public void Area(int base1, int altura)
+        {
+            area = base1 * altura;
+            Console.WriteLine("El area del cuadrado es: " + area);
+        }
+        
+    }
+    public class Persona
+    {
+        public string? Name;
+        public string? LastName;
+        public void FullName(string Name, string LastName)
+        {
+            Console.WriteLine("El nombre completo es: " + Name + " " + LastName);
+        }
+        //Recibir fecha de nacimiento y calcular la edad.
+        public int BirthDate;
+        //calcular la edad
+        public int Age1;
+        public void Age(int BirthDate)
+        {
+            var Age = DateTime.Now.Year - BirthDate;
+            Console.WriteLine("La edad es: " + Age);
+        }
+    }
+    public class Auto
+    {
+        public string? Marca;
+        public string? Modelo;
+        public int? Año;
+        public string? Color;
+        public int Velocidad = 20;
+        //estado del auto, encendido o apagado
+        public bool? Estado;
+        public void AutoInfo(string Marca="Nissan", string Modelo="Nigara", int Año=2028, string Color="Rojo")
+        {
+            Console.WriteLine("La marca del auto es: " + Marca + " " + Modelo + " " + Año + " " + Color);
+        }
+        //metodo encender y apagar el motor
+        //Si el motor esta encendido, podemos acelerar y frenar
+        //Al acelerar el auto incrementa unn 10% su velocidad
+        //Al frenar el auto decrementa un 20% su velocidad
+        public void Encender()
+        {
+            Console.WriteLine("El auto esta encendido");
+        }
+        public void Acelerar()
+        {
+            var velocidad = Velocidad * 10/100;
+            Console.WriteLine("El auto esta acelerando");
+            Console.WriteLine("La velocidad es: " + velocidad);
+        }
+        public void Frenar()
+        {
+            var velocidad = Velocidad * 20 / 100;
+            Console.WriteLine("El auto esta frenando");
+            Console.WriteLine("La velocidad es: " + velocidad);
+        }
+        public void Apagar()
+        {
+            Console.WriteLine("El auto esta apagado");
+        }
+        //metodo para conocer la velocidad
+        public void Velocidad1()
+        {
+            Console.WriteLine("La velocidad actual es: " + Velocidad);
+        }
+        //estado del auto, encendido o apagado
+        public void Estado1()
+        {
+            if (Estado == true)
+            {
+                Console.WriteLine("El auto esta encendido");
+            }
+            else
+            {
+                Console.WriteLine("El auto esta apagado");
+            }
+        }
+    }
+    public class Mascota
+    {
+        public string? Nombre;
+        public string? tipo;//perro o gato
+        public int energia = 20;
+        //La mascota tiene nombre y tipo
+        public void MascotaInfo(string Nombre, string tipo)
+        {
+            Console.WriteLine("El nombre de la mascota es: " + Nombre + " " + tipo);
+        }
+        //metodo para alimentarlo. Cada vez que come su energia aumenta en un 30%
+        public void Alimentar()
+        {
+            energia = energia + energia * 30 / 100;
+            Console.WriteLine("Tu mascota se ha alimentado, ahora su energia es: " + energia);
+        }
+        public void Correr()
+        {
+            //cada vez que corre su energia disminuye en un 10% y solo puede correr si tiene energia superior a 20
+            if (energia > 20)
+            {
+                energia = energia - energia * 10 / 100;
+                Console.WriteLine("Tu mascota ha corrido, ahora su energia es: " + energia);
+            }
+            else
+            {
+                Console.WriteLine("Tu mascota no tiene energia suficiente para correr");
+            }
+
+        }
+
+    }
+    public class Smarthphone
+    {
+        public string? Marca;
+        public string? Modelo;
+        public int? Volumen = 10;
+        public int? Brillo = 20;
+        //Smarthphone info
+        public void SmarthphoneInfo(string Marca, string Modelo)
+        {
+            Console.WriteLine("La marca del smartphone es: " + Marca + " " + Modelo);
+        }
+
+        //Encender o apagar el celular
+        public void Encender()
+        {
+            Console.WriteLine("El celular esta encendido");
+        }
+        public void Apagar()
+        {
+            Console.WriteLine("El celular esta apagado");
+        }
+        //Silenciar el celular
+        public void Silenciar()
+        {
+            Console.WriteLine("El celular esta silenciado");
+        }
+        //metodo para subir y bajar el volumen
+        public void VolumenUp()
+        {
+            Volumen = Volumen + 1;
+            Console.WriteLine("El volumen es: " + Volumen);
+        }
+        public void VolumenDown()
+        {
+            Volumen = Volumen - 1;
+            Console.WriteLine("El volumen es: " + Volumen);
+        }
+        //Subir o bajar el brillo
+        public void BrilloUp()
+        {
+            Brillo = Brillo + 1;
+            Console.WriteLine("El brillo es: " + Brillo);
+        }
+        public void BrilloDown()
+        {
+            Brillo = Brillo - 1;
+            Console.WriteLine("El brillo es: " + Brillo);
+        }
+    }
 }
 
