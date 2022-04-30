@@ -6,30 +6,48 @@ namespace Ejercicios3
     {
         static void Main(string[] args)
         {
-           /* Ejercicios ejercicios = new Ejercicios();
+            Ejercicios ejercicios = new Ejercicios();
             Ejercicios3.Ejercicios.Mayor100();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.GetYourNum();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.Doble();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.Romanos();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.YourAge();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.Triangulo();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.Billetes();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.Fors();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.Suma();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.mult3();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.Contras();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.ContraLimit();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.Adivina();
+            Console.WriteLine("----------------------------------------------------");
             Ejercicios3.Ejercicios.MayMen();
-            Ejercicios3.Ejercicios.Count();*/
+            Console.WriteLine("----------------------------------------------------");
+            Ejercicios3.Ejercicios.Count();
+            Console.WriteLine("----------------------------------------------------");
             //------------------------------------
             Cuadrado cuadrado = new();
             cuadrado.Area(3,5);
+            Console.WriteLine("----------------------------------------------------");
             //------------------------------------
             Persona persona = new();
             persona.FullName("Juan", "Perez");
+            Console.WriteLine("----------------------------------------------------");
             //-------------------------------------
             persona.Age(2000);
+            Console.WriteLine("----------------------------------------------------");
             //-------------------------------------
             Auto auto = new();
             auto.AutoInfo("Ford", "Fiesta", 2090, "Rojo");
@@ -46,7 +64,7 @@ namespace Ejercicios3
             auto.Pasajeros(2);
             auto.MoverMascota();
             auto.BajarPasajeros();
-
+            Console.WriteLine("----------------------------------------------------");
             //-------------------------------------
             Mascota mascota = new();
             mascota.MascotaInfo("Pepito", "Gato");
@@ -54,6 +72,7 @@ namespace Ejercicios3
             mascota.Alimentar();
             mascota.Correr();
             mascota.Correr();
+            Console.WriteLine("----------------------------------------------------");
             //---------------------------------------
             Smarthphone smarthphone = new();
             smarthphone.SmarthphoneInfo("Iphone", "X");
@@ -64,6 +83,7 @@ namespace Ejercicios3
             smarthphone.Silenciar();
             smarthphone.BrilloUp();
             smarthphone.BrilloDown();
+            Console.WriteLine("----------------------------------------------------");
             //---------------------------------------
             Libro libro = new();
             libro.LibroInfo("El Quijote", "Cervantes", 1000, 1805);
@@ -75,6 +95,7 @@ namespace Ejercicios3
             estudiante.CantidadLibrosNoLeidos();
             estudiante.AgregarLibros();
             estudiante.QuitarLibros();
+            Console.WriteLine("----------------------------------------------------");
         }
     }
 }
