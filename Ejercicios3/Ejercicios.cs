@@ -471,9 +471,10 @@ namespace Ejercicios3
             Console.WriteLine("La edad es: " + Age);
         }
     }
-    //WARNING! Ejercicios 13 y 14 aun no completados
+    //WARNING! Ejercicios 13 aun no completados
     public class Auto
     {
+
         public string? Marca;
         public string? Modelo;
         public int? Año;
@@ -488,6 +489,7 @@ namespace Ejercicios3
         public bool? Disponible;
         public string? Tamano = "Chico";
         public bool? masky;
+        
         public void AutoInfo(string Marca = "Nissan", string Modelo = "Nigara", int Año = 2028, string Color = "Rojo")
         {
             Console.WriteLine("La marca del auto es: " + Marca + " " + Modelo + " " + Año + " " + Color);
@@ -571,6 +573,7 @@ namespace Ejercicios3
         {
             
             Estado = false;
+            Velocidad = 0;
             Console.WriteLine("El auto esta apagado");
         }
         //metodo para conocer la velocidad
@@ -589,6 +592,12 @@ namespace Ejercicios3
             {
                 Console.WriteLine("El auto esta apagado");
             }
+        }
+        //metodo privado para unos calculos :)
+        private void Count(int pass, int Capacidad)
+        {
+            var quanto = Capacidad - pass;
+            Console.WriteLine("La capacidad restante en el vehiculo es de: " + quanto);
         }
         public void Pasajeros(int pasaj)
         {
@@ -614,17 +623,24 @@ namespace Ejercicios3
             else
             {
                 Disponible = true;
+
                 Console.WriteLine("El auto aun tiene capacidad.");
+                Count(pasaj, Capacidad);
             }
         }
-
-        //WARNING!! Ejercicios 13 y 14 aun no completados
+        
         public void Mascota( string mascota1)
         {
+            Random rndt = new Random();
+            //escribe un numero random entre 1 y 4
+            var num = rndt.Next(1, 4);
+
             if (Conductor == true && Mayor == true && mascota1 == "chico" && Capacidad <= 4)
             {
-                masky = false;                
-                Console.WriteLine("El auto ahora tiene una mascota");
+                masky = false;
+                Disponible = true;
+                Console.WriteLine("El auto ahora tiene una mascota, uno chiquito");
+                Console.WriteLine("Esta con el pasajero numero " + num);
             }
             if (Conductor == false || Mayor == false)
             {
@@ -633,6 +649,7 @@ namespace Ejercicios3
             }
             if (mascota1 != "chico" && Capacidad < 4)
             {
+
                 masky = true;
                 Console.WriteLine("La mascota ha tomado el lugar de alguien :)");
             }
@@ -644,7 +661,32 @@ namespace Ejercicios3
 
             
         }
-        
+        public void MoverMascota()
+        {
+            Random rndt = new Random();
+            //escribe un numero random entre 1 y 4
+            var num1 = rndt.Next(1, 4);
+            Console.WriteLine($"La mascota ahora esta con el pasajero numero: {num1}");
+        }
+        //Los pasajeros bajan?
+        public void BajarPasajeros()
+        { 
+            if(Velocidad == 0)
+            {
+                Console.WriteLine("Los pasajeros pueden bajar");
+            }
+            else
+            {
+                Console.WriteLine("Nadie puede bajarse, el auto sigue en movimiento");
+            }
+            if (Estado == false){
+                Console.WriteLine("El conductor puede bajarse");
+            }
+            else
+            {
+                Console.WriteLine("El conductor aun no puede bajarse, el motor sigue encendido");
+            }
+        }
     }
     public class Mascota
     {
@@ -737,30 +779,13 @@ namespace Ejercicios3
         //Libro info
         public void LibroInfo(string Titulo, string Autor, int Paginas, int Precio)
         {
-            Console.WriteLine("El titulo del libro es: " + Titulo + " " + Autor + " " + Paginas + " " + Precio);
+            Console.WriteLine("El titulo del libro es: " + Titulo + " "+ ", el autor es "+ " " + Autor + " " + ", tiene " + Paginas + " " + "Cantidad de paginas" + " " + "y cuesta" + " " + Precio);
         }
         //metodo para comprar el libro
-        public void Comprar()
-        {
-            Console.WriteLine("El libro ha sido comprado");
-        }
+        
         //metodo que diga si fue leido o no
-        public void Leido()
-        {
-            if (WasRead == true)
-            {
-                Console.WriteLine("El libro ha sido leido");
-            }
-            else
-            {
-                Console.WriteLine("El libro no ha sido leido");
-            }
-        }
+       
         //metodo para vender el libro
-        public void Vender()
-        {
-            Console.WriteLine("El libro ha sido vendido");
-        }
     }
     //Crear una clase Estudiante, que hereda de Persona (la clase de los puntos anteriores).
     public class Estudiante : Persona
@@ -796,6 +821,24 @@ namespace Ejercicios3
             libros.Add(libro2);
             libros.Add(libro3);
         }
+        //metodo que muestre todos los libros
+        private void MostrarLibros()
+        {
+            foreach (Libro libro in libros)
+            {
+                Console.WriteLine("El libro es: " + libro.Titulo);
+                Console.WriteLine();
+                Console.WriteLine("El autor es: " + libro.Autor);
+                Console.WriteLine();
+                Console.WriteLine("La cantidad de paginas es: " + libro.Paginas);
+                Console.WriteLine();
+                Console.WriteLine("El precio es: " + libro.Precio);
+                Console.WriteLine();
+                Console.WriteLine("El libro ha sido leido: " + libro.WasRead);
+                Console.WriteLine();
+                Console.WriteLine("----------------------------------------------------");
+            }
+        }
         //Metodo que muestre los libros leidos
         public void LibrosLeidos()
         {
@@ -807,7 +850,7 @@ namespace Ejercicios3
                 }
             }
         }
-        //Metodo que muestre los libros no leidos
+        //Metodo que muestra los libros no leidos
         public void LibrosNoLeidos()
         {
             foreach (Libro libro in libros)
@@ -826,12 +869,14 @@ namespace Ejercicios3
             {
                 if (libro.WasRead == true)
                 {
-                    _ = paginas + libro.Paginas;
+                    //count how many paginas have been read
+                    paginas = (int)(paginas + libro.Paginas);
+                    
                 }
             }
             Console.WriteLine("La cantidad de paginas leidas es: " + paginas);
         }
-        //metodo que muestre cuantos libros no fueron leidos
+        //metodo que muestre la cantidad de libros que no fueron leidos
         public void CantidadLibrosNoLeidos()
         {
             int librosNoLeidos = 0;
@@ -839,7 +884,7 @@ namespace Ejercicios3
             {
                 if (libro.WasRead == false)
                 {
-                    _ = librosNoLeidos + 1;
+                    librosNoLeidos = librosNoLeidos + 1;
                 }
             }
             Console.WriteLine("La cantidad de libros no leidos es: " + librosNoLeidos);
@@ -847,6 +892,10 @@ namespace Ejercicios3
         //metodo que permita agregar o quitar libros a la lista
         public void AgregarLibros()
         {
+            Console.WriteLine("Los libros que tiene en la lista son: ");
+            MostrarLibros();
+            Console.WriteLine("Agregue un libro de la lista");
+
             Console.WriteLine("Ingrese el titulo del libro");
             string titulo = Console.ReadLine();
             Console.WriteLine("Ingrese el autor del libro");
@@ -855,7 +904,7 @@ namespace Ejercicios3
             int paginas = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ingrese el precio del libro");
             int precio = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Ingrese si el libro ha sido leido o no");
+            Console.WriteLine("Ingrese si el libro ha sido leido o no(true/false)");
             bool wasRead = Convert.ToBoolean(Console.ReadLine());
             Libro libro = new Libro();
             libro.Titulo = titulo;
@@ -867,6 +916,10 @@ namespace Ejercicios3
         }
         public void QuitarLibros()
         {
+            Console.WriteLine("Los libros que tiene en la lista son: ");
+            MostrarLibros();
+            Console.WriteLine("Elimine un libro de la lista");
+            
             Console.WriteLine("Ingrese el titulo del libro");
             string titulo = Console.ReadLine();
             Console.WriteLine("Ingrese el autor del libro");
@@ -875,7 +928,7 @@ namespace Ejercicios3
             int paginas = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ingrese el precio del libro");
             int precio = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Ingrese si el libro ha sido leido o no");
+            Console.WriteLine("Ingrese si el libro ha sido leido o no (true/false)");
             bool wasRead = Convert.ToBoolean(Console.ReadLine());
             Libro libro = new Libro();
             libro.Titulo = titulo;
@@ -887,4 +940,3 @@ namespace Ejercicios3
         }
     }
 }
-

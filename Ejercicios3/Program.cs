@@ -36,15 +36,17 @@ namespace Ejercicios3
             auto.ConductorHay("si"); //si o no
             auto.EdadConductor(18);
             auto.Encender();
-            auto.Mascota("grande");
+            auto.Mascota("chico");
             //si el auto esta encendido se acelera o frena
             auto.Acelerar();
             auto.Frenar();
             auto.Apagar();
             auto.Acelerar();
             auto.Frenar();
-            auto.Pasajeros(3);
-            
+            auto.Pasajeros(2);
+            auto.MoverMascota();
+            auto.BajarPasajeros();
+
             //-------------------------------------
             Mascota mascota = new();
             mascota.MascotaInfo("Pepito", "Gato");
@@ -63,6 +65,16 @@ namespace Ejercicios3
             smarthphone.BrilloUp();
             smarthphone.BrilloDown();
             //---------------------------------------
+            Libro libro = new();
+            libro.LibroInfo("El Quijote", "Cervantes", 1000, 1805);
+            Estudiante estudiante = new();
+            estudiante.Libros();
+            estudiante.LibrosLeidos();
+            estudiante.LibrosNoLeidos();
+            estudiante.PaginasLeidas();
+            estudiante.CantidadLibrosNoLeidos();
+            estudiante.AgregarLibros();
+            estudiante.QuitarLibros();
         }
     }
 }
